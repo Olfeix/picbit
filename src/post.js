@@ -114,22 +114,15 @@ function Post({username,postId,user, caption, imageUrl}) {
     </div>
     </Fade>
       </Modal>
+      <div className="section">
         <div className="post" >
             <div className="post__header">
-            <Avatar className="post__avatar"  alt={username} src="/static/images/avatar/1.jpg"/>
             <h3>{username}</h3>
             </div>
             <img className="post__image" src={imageUrl} onClick={()=>setOpen(true)} alt={username}/>
             <div className="post__section">
-    <h4 className="post__text"><strong>{username}</strong>{caption} </h4>
 
-    {username && (
-         <div className="post__delete">
-         <IconButton  onClick={postDelete} aria-label="delete">
-       <DeleteIcon fontSize="large" />
-       </IconButton>
-       </div>
-    )}
+
  
     </div>
    {comments.map((comment)=> (
@@ -152,6 +145,7 @@ function Post({username,postId,user, caption, imageUrl}) {
 </form>
   )}
   
+        </div>
         </div>
       
         </>

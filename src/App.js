@@ -7,7 +7,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import {Button} from '@material-ui/core';
 import {Input} from '@material-ui/core';
-import ImageUpload from './ImageUpload';
 function getModalStyle() {
   const top = 50;
   const left = 50;
@@ -159,12 +158,12 @@ const clearInput = () => {
          </div>
        
 
-   
+   <div className="section">
   {posts.map(({post,id}) => (
     <Post key={id} user={user} username={post.username} postId={id} caption={post.caption} imageUrl={post.imageUrl}/>
   
   ))}
-  {user && ( <ImageUpload username={user.displayName}/>)}
+  </div>
     </div>
   );
 }
